@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Timer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/style-timer.css'>
+    <script src="https://kit.fontawesome.com/74c4430b44.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="timer">
+        <div class="controls">
+          <input id="duration" value="30" />
+          <div>
+            <button id="start"><i class="fa-solid fa-play"></i></button>
+            <button id="pause"><i class="fa-solid fa-pause"></i></button>
+          </div>
+        </div>
+        <svg class="dial">
+            <defs>
+                <linearGradient id="gradient" gradientTransform="flip">
+                    <stop offset="5%"  stop-color="gold" />
+                    <stop offset="95%" stop-color="red" />
+                </linearGradient>
+            </defs>
+          <circle
+            id="cir"
+            fill="transparent"
+            stroke="url(#gradient)"
+            stroke-width="15"
+            r="190"
+            cx="0"
+            cy="200"
+            transform="rotate(-90 100 100)"
+          />
+        </svg>
+      </div>
+
+    <script src='../assets/js/timer-app-scripts/timer-class.js'></script>
+    <script src='../assets/js/timer-app-scripts/timer.js'></script>
+</body>
+</html>
